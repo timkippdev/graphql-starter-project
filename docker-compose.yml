@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+
+  app:
+    container_name: app
+    build:
+      context: .
+    volumes:
+      - '.:/var/www'
+    ports:
+      - '8080:80'
