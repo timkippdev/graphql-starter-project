@@ -11,6 +11,16 @@ This starter project was derived from the [graphql-php](https://github.com/webon
 docker-compose up -d
 ```
 
+If you need to run any composer commands, you use run them against the _composer_ container:
+```bash
+docker-compose run --rm composer <insert command here>
+```
+
+If you need to log into your Docker container, run the following command and you will be launched into a shell inside the container:
+```bash
+docker exec -it graphql-starter-project bash
+```
+
 ## Executing a GraphQL Query
 There are multiple ways to do this, but here are a couple to get started:
 

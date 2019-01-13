@@ -1,3 +1,9 @@
+# install composer dependencies
+FROM composer as composer
+COPY ./composer.* /app/
+RUN composer install --ignore-platform-reqs --no-scripts
+
+# install PHP / Apache
 FROM php:7.1-apache
 
 WORKDIR /var/www
@@ -14,7 +20,8 @@ RUN apt-get update && \
 # copy Apache conf
 COPY ./.docker/apache.conf /etc/apache2/sites-available/000-default.conf
 
-# install composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
-
+# copy all files to root directory
 COPY . .
+
+# copy vendor dependencies to root directory
+COPY --from=composer /app/vendor /var/www/vendor

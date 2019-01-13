@@ -3,10 +3,17 @@ version: '3.5'
 services:
 
   app:
-    container_name: app
+    container_name: graphql-starter-project
     build:
       context: .
     volumes:
-      - '.:/var/www'
+      - .:/var/www
     ports:
       - '8080:80'
+
+  composer:
+    restart: 'no'
+    image: composer
+    command: install
+    volumes:
+      - .:/app

@@ -1,0 +1,10 @@
+.DS_Store
+.git
+.gitignore
+.dockerignore
+.idea
+Dockerfile
+README.md
+docker-compose.yml
+vendor
+.vscode
