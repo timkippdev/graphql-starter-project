@@ -3,6 +3,7 @@
     "description": "Starter project for working with the PHP GraphQL library",
     "license": "MIT",
     "keywords": [ "graphql", "starter project" ],
+    "type": "project",
     "authors": [
       {
         "name": "Tim Kipp",
