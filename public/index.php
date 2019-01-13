@@ -32,7 +32,7 @@ $query = $input['query'];
 $variableValues = isset($input['variables']) ? $input['variables'] : null;
 
 try {
-    $rootValue = null;
+    $rootValue = ['prefix' => 'You said: '];
     $result = GraphQL::executeQuery($schema, $query, $rootValue, null, $variableValues);
     $output = $result->toArray();
 } catch (\Exception $e) {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3374f3f3fe86487e0dc5159d25f70f93",
+    "content-hash": "99af6423d6746fe88c71a77ed1e1f021",
     "packages": [
         {
             "name": "webonyx/graphql-php",
@@ -62,7 +62,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.1.3"
